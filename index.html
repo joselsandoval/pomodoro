@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task Timer</title>
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+</head>
+<body onload="makeFloatingControlsContainer()" onresize="makeFloatingControlsContainer()">
+    <div class="container center">
+        <h1 class="center title">My Step Timer</h1>
+        <div class="flow-right controls">
+            <span>Item count: <span id="item-count">0</span></span>
+            <span>Unchecked count: <span id="unchecked-count">0</span></span>
+            <span>Default Task Time (in minutes): <span id="default-time">0</span></span>
+        </div>
+        <div id="control-timers">
+            <button class="button center" id="toggle-timer" onClick="startTimer()">Start</button>
+            <button class="button center" id="toggle-timer" onClick="resetTimer()">Reset</button>
+            <button class="button center" onClick="newTimer()">New Timer</button>
+        </div>
+        <div id="timersBox">
+            <ul id="pomodoro-timer" class="pomodoro-timer"></ul>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
